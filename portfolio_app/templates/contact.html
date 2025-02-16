@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Contact Me</h1>
+
+<p>Email: siddharthbollam4@gmail.com</p>
+<p>LinkedIn: <a href="https://www.linkedin.com/in/bollam-siddharth-118a57248">Visit Profile</a></p>
+<p>GitHub: <a href="https://github.com/Siddhubollam9">Visit GitHub</a></p>
+
+<h2>Send Me a Message</h2>
+<form method="post">
+    {% csrf_token %}
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Your Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+    <button type="submit">Send Message</button>
+</form>
+
+<h2>Follow Me</h2>
+<a href="https://www.linkedin.com/in/bollam-siddharth-118a57248">LinkedIn</a> |
+<a href="https://github.com/Siddhubollam9">GitHub</a> |
+<a href="mailto:siddharthbollam4@gmail.com">Email</a>
+{% endblock %}
